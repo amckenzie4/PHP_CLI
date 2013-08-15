@@ -1,11 +1,9 @@
 #!/usr/bin/php -q
 
 <?php
-# I'm building this as a demonstration of the arghandler object.
-# Eventually, the arghandler library (arghandler.php) will be rolled
-# into the php_io.inc file, but I want to get it working first.
-# UPDATE: (8 August, 2006) argHandler has now been rolled into 
-# php_io.inc.  This demo has been updated to follow the change.
+# This file is both demo and documentation for the cli_io include
+# file.  Everything cli_io can do is demonstrated here, and the 
+# comments should explain every step.
 
 # First, include the file.
 include "./cli_io.inc";
@@ -75,9 +73,7 @@ $arg->setValidFlags(
 
 # OK, so the list of valid flags is defined, and the system knows about
 # the command line arguments.  The next step is to combine those two 
-# pieces of information, and set up variables.  So, we use parseFlags() to 
-# match the command-line information to the definitions from setValidFlags().
-# UPDATE: (8 August, 2006) This step is no longer necessary.  The 
+# pieces of information, and set up variables.  The 
 # parseFlags() function still exists, but is now called automatically by
 # setValidFlags().  This behaviour can be changed in the cli_io.inc 
 # file, by commenting out line 129 (or search for the phrase "####", 
